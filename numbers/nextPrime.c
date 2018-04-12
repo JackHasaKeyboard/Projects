@@ -1,22 +1,36 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 int main() {
-	printf("Number: ");
-	int roof;
-	scanf("%d", &roof);
+	int i = 2;
 
-	for (int i = 2; i < roof; i++) {
-		bool prime = true;
+	bool another = true;
+	while (another) {
+		printf("Another one? (y/n): ");
+		char conf;
+		scanf(" %c", &conf);
 
-		for (int f = 2; f <= i / 2; f++) {
-			if (i % f == 0) {
-				prime = false;
-			}
+		if (conf != 'y') {
+			another = false;
 		}
 
-		if (prime) {
-			printf("%d is a prime number\n", i);
+
+		bool prime = false;
+		while (!prime) {
+			prime = true;
+
+			for (int f = 2; f <= i / 2; f++) {
+				if (i % f == 0) {
+					prime = false;
+				}
+			}
+
+			if (prime) {
+				printf("%d is a prime number\n", i);
+			}
+
+			i++;
 		}
 	}
 
