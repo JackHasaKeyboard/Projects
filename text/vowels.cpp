@@ -7,11 +7,11 @@ int main() {
 	string vowel = "aeiou";
 
 	cout << "String: ";
-	string str;
-	cin >> str;
+	string txt;
+	cin >> txt;
 
 	int i = 0;
-	for (auto c : str) {
+	for (auto c : txt) {
 		for (auto v : vowel) {
 			if (c == v) {
 				i++;
