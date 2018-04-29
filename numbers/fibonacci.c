@@ -8,7 +8,7 @@ int main() {
 	int t1 = 0,
 			t2 = 1;
 
-	while (t1 + t2 < no) {
+	while (t1 + t21 < no) {
 		t1 += t2;
 
 		printf("%d\n", t1);
